@@ -5,13 +5,16 @@ import Stream
 
 
 def newmessage_ask():
-    print("Would you like to encode or decode a new message?")
+    print("Would you like to encode/decode a new message?")
     newmessage_choice = input("Yes/No: ").lower()
     if newmessage_choice == "yes":
         print("Ok.")
         main()
     elif newmessage_choice == "no":
         print("Ok. Thank You for using our program.")
+    else:
+        print("Invalid Input. Restarting.")
+        main()
 
 
 def no_confirm():
@@ -25,7 +28,7 @@ def no_confirm():
 
 
 def main():
-    print("Would you like to encode a message?")
+    print("Would you like to encode or decode a message?")
     first_choice = input("Encode/Decode: ").lower()
     if first_choice == "encode":
         print("You have chosen to Encode a message.")
